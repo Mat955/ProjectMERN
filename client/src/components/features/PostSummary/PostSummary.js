@@ -5,12 +5,12 @@ import './PostSummary.scss';
 import Button from '../../common/Button/Button';
 import SmallTitle from '../../common/SmallTitle/SmallTitle';
 import HtmlBox from '../../common/HtmlBox/HtmlBox';
-import maxLentgh from '../../common/MaxLength/MaxLength';
+import cutText from '../../common/MaxLength/cutText';
 
 const PostSummary = ({ id, title, content }) => (
     <article className="post-summary">
         <SmallTitle>{title}</SmallTitle>
-        <HtmlBox>{maxLentgh(content, 250)}</HtmlBox>
+        <HtmlBox>{cutText(content, 100)}</HtmlBox>
         <Button variant="primary"><Link to={`/posts/${id}`}>
             Read more
         </Link></Button>
